@@ -21,7 +21,7 @@ function Stack(){
 
     this.isEmpty = function(){
         // informa se a pilha está vazia ou não
-        return items.element === 0
+        return items.length === 0
     }
 
     this.clear = function(){
@@ -36,7 +36,36 @@ function Stack(){
 
     this.print = function(){
         // imprime a pilha no console
-        console.log(items.toString)
+        console.log(items.toString())
     }
 
 }
+
+var pilha = new Stack()
+ 
+console.log(pilha.isEmpty())
+
+pilha.push(5)
+pilha.print()
+
+pilha.push(8)
+pilha.print()
+
+pilha.push(11)
+pilha.print()
+
+pilha.push(15)
+pilha.print()
+
+pilha.pop()
+pilha.print()
+
+pilha.pop()
+pilha.print()
+
+pilha.pop()
+pilha.print()
+
+pilha.pop()
+
+console.log(pilha.isEmpty())
