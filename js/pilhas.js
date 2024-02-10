@@ -70,22 +70,35 @@
 
 // console.log(pilha.isEmpty())
 
-function dec2Bin(decNumber) {
+// converte decimal para binário
+function dec2Bin(decNumber) {//35
     var restStack = [],
     rest,
     binaryString = ''
 
-    while(decNumber > 0) {
-        rest = Math.floor(decNumber % 2)
-        restStack.push(rest)
-        decNumber = Math.floor(decNumber / 2)
+    while(decNumber > 0) { //35/17/8/4/1
+        rest = Math.floor(decNumber % 2) //11/1/0/0
+        restStack.push(rest) // [1,1,0,0,0,1]
+        decNumber = Math.floor(decNumber / 2) // 17/8/4/1
     }
 
     while(restStack.length > 0) {
-        binaryString += restStack.pop().toString()
+        binaryString += restStack.pop().toString()//100011
     }
 
     return binaryString;
 }
 
-console.log(dec2Bin(25))
+// console.log(dec2Bin(35))
+
+function baseConverter(decNumber, base){
+    var restStack = [],
+    rest,
+    baseString = '',
+    digits ='123456789ABCDEF'
+
+    while(decNumber > 0) {
+        rest = Math.floor(decNumber % base)
+        restStack.push(rest)
+    }
+}
