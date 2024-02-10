@@ -102,4 +102,10 @@ function baseConverter(decNumber, base){
         restStack.push(rest)
         decNumber = Math.floor(decNumber/base)
     }
+
+    while(restStack > 0) {
+        baseString += digits[restStack.pop()]
+    }
+
+    return baseString;
 } 
