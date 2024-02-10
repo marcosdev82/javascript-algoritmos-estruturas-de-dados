@@ -100,5 +100,6 @@ function baseConverter(decNumber, base){
     while(decNumber > 0) {
         rest = Math.floor(decNumber % base)
         restStack.push(rest)
+        decNumber = Math.floor(decNumber/base)
     }
-}
+} 
