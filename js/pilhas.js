@@ -91,21 +91,22 @@ function dec2Bin(decNumber) {//35
 
 // console.log(dec2Bin(35))
 
-function baseConverter(decNumber, base){
+function baseConverter(decNumber, base){ // 123/26
     var restStack = [],
     rest,
     baseString = '',
     digits ='123456789ABCDEF'
 
-    while(decNumber > 0) {
-        rest = Math.floor(decNumber % base)
-        restStack.push(rest)
-        decNumber = Math.floor(decNumber/base)
+    while(decNumber > 0) {// 0
+        rest = Math.floor(decNumber % base) //0
+        restStack.push(rest) // []
+        decNumber = Math.floor(decNumber/base) // 0
     }
 
-    while(restStack > 0) {
-        baseString += digits[restStack.pop()]
+    while(restStack.length() > 0) { // 0
+        baseString += digits[restStack.pop()] // 7B
     }
 
     return baseString;
 } 
+console.log(baseConverter(123, 26))
