@@ -13,6 +13,7 @@ function Queue(){
 
     this.front = function(){
         // retorna o primeiro elemento da fila
+        return items[0];
     }
 
     this.isEmpty = function(){
