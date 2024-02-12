@@ -59,7 +59,7 @@ function PriorityQueue(){
 
         for (var i = 0; i < items.length; i++){
             if (queueElement.priority < items[i].priority){
-                items.slice(i, 0, queueElement)
+                items.splice(i, 0, queueElement)
                 added = true
                 break
             }
@@ -79,6 +79,10 @@ function PriorityQueue(){
             console.log(items[i].element + ' ' + items[i].priority)
         }
     }
-
-
 }
+
+var pqueue = new PriorityQueue();
+pqueue.enqueue('Carlos', 2)
+pqueue.enqueue('Ana', 1)
+pqueue.enqueue('Lucas', 1)
+pqueue.print()
