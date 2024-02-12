@@ -44,6 +44,9 @@ function Queue(){
 // console.log(fila.isEmpty())
 // fila.print()
 
+/**
+ * FILA DE PRIORIDADE
+ */
 function PriorityQueue(){
 
     var items = []
@@ -81,8 +84,40 @@ function PriorityQueue(){
     }
 }
 
-var pqueue = new PriorityQueue();
-pqueue.enqueue('Carlos', 2)
-pqueue.enqueue('Ana', 1)
-pqueue.enqueue('Lucas', 1)
-pqueue.print()
+// var pqueue = new PriorityQueue();
+// pqueue.enqueue('Carlos', 2)
+// pqueue.enqueue('Ana', 1)
+// pqueue.enqueue('Lucas', 1)
+// pqueue.print()
+
+/**
+ * FILA CIRCULAR
+ */
+function hotPotato(nameList, num){
+    var queue = new Queue();
+
+    for (var i = 0; i < nameList.length; i++) {
+        queue.enqueue(nameList[i])
+    }
+
+    var eliminated = '';
+
+    while(queue.size() > 1){ //1
+        for(var i = 0; i < num; i++){//6
+            queue.enqueue(queue.dequeue()) //  [ 'João' ]
+        }
+        eliminated = queue.dequeue()
+        console.log(eliminated + ' Foi eleminidado do jogo')
+        /**
+         * maria eleminada
+         * jose eliminado
+         * lucas eleminado
+         */
+        
+    }
+    return queue.dequeue()
+} 
+
+var names = ['João', 'José', 'Maria', 'Ana', 'Lucas']
+var winner =  hotPotato(names, 7)
+console.log('O vencedor é ' + winner)
