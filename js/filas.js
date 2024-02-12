@@ -23,6 +23,7 @@ function Queue(){
 
     this.size = function(){
         // retorna o tamanho da fila
+        return items.length()
     }
 
     this.print = function(){
