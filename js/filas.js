@@ -18,6 +18,7 @@ function Queue(){
 
     this.isEmpty = function(){
         // verifica se a fila está vazia
+        return items.length === 0;
     }
 
     this.size = function(){
