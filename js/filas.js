@@ -32,14 +32,53 @@ function Queue(){
     }
 }
 
-var fila = new Queue()
+// var fila = new Queue()
 
-fila.enqueue('Carlos')
-fila.enqueue('Ana')
-fila.enqueue('Lucas')
-fila.dequeue()
-fila.dequeue()
+// fila.enqueue('Carlos')
+// fila.enqueue('Ana')
+// fila.enqueue('Lucas')
 // fila.dequeue()
-console.log(fila.size())
-console.log(fila.isEmpty())
-fila.print()
+// fila.dequeue()
+// // fila.dequeue()
+// console.log(fila.size())
+// console.log(fila.isEmpty())
+// fila.print()
+
+function PriorityQueue(){
+
+    var items = []
+
+    function QueueElement(element, priority){
+        this.element = element
+        this.priority = priority
+    }
+
+    this.enqueue = function(element, priority){
+        var queueElement = new QueueElement(element, priority)
+        var added = false
+
+        for (var i = 0; i < items.length; i++){
+            if (queueElement.priority < items[i].priority){
+                items.slice(i, 0, queueElement)
+                added = true
+                break
+            }
+        }
+
+        if (!added){
+            items.push(queueElement)
+        }
+    }
+
+    this.dequeue = function() {
+        return items.shift()
+    }
+
+    this.print = function(){
+        for(var i = 0; i < items.length; i++){
+            console.log(items[i].element + ' ' + items[i].priority)
+        }
+    }
+
+
+}
