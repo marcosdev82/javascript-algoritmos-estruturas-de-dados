@@ -28,5 +28,6 @@ function Queue(){
 
     this.print = function(){
         // imprime a fila no console
+        console.log(items.toString())
     }
 }
