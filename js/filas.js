@@ -7,7 +7,8 @@ function Queue(){
     }
 
     this.dequeue = function(){
-        // remove um item
+        // remove um item e retorna
+        return items.shift()
     }
 
     this.front = function(){
