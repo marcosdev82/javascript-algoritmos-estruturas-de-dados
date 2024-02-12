@@ -23,7 +23,7 @@ function Queue(){
 
     this.size = function(){
         // retorna o tamanho da fila
-        return items.length()
+        return items.length 
     }
 
     this.print = function(){
@@ -31,3 +31,15 @@ function Queue(){
         console.log(items.toString())
     }
 }
+
+var fila = new Queue()
+
+fila.enqueue('Carlos')
+fila.enqueue('Ana')
+fila.enqueue('Lucas')
+fila.dequeue()
+fila.dequeue()
+// fila.dequeue()
+console.log(fila.size())
+console.log(fila.isEmpty())
+fila.print()
