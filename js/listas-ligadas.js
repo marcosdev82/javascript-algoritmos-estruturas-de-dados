@@ -11,9 +11,9 @@ function ListasLigadas() {
         //adiciona um elemento no final da list
         var node = new Node(element),
         current
-
+       
         if (head === null) {
-
+            current = node
         } else {
             current = head
             
@@ -68,3 +68,9 @@ function ListasLigadas() {
         console.log(this.toString())
     }
 }
+
+var ll = new ListasLigadas()
+ll.append('João')
+ll.append('José')
+ll.append('Maria')
+ll.print()
