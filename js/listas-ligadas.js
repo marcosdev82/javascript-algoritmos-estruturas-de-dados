@@ -10,7 +10,7 @@ function ListasLigadas() {
 
     this.append = function(element) {
         //adiciona um elemento no final da list
-        var node = new Node(element),
+        var node = new Node(element), 
         current
        
         if (head === null) {
@@ -34,6 +34,25 @@ function ListasLigadas() {
 
     this.removeAt = function(position) {
         //remove elemento de uma posição especifica
+        if(position > -1 && position < length) {
+            var current = head,
+            previous,
+            index = 0
+
+            if (position === 0) {
+                head = current.next
+            } else {    
+                while(index++ < position) {
+                    previous = current
+                    current = current.next
+                }
+                previous.next = current.next
+            }
+            length--
+            return current.element
+        } else {
+            return null
+        }
     }
 
     this.remove = function(element) {
@@ -74,4 +93,6 @@ var ll = new ListasLigadas()
 ll.append('João')
 ll.append('José')
 ll.append('Maria')
+ll.print()
+ll.removeAt(1)
 ll.print()
