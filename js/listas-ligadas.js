@@ -9,6 +9,7 @@ function ListasLigadas() {
 
     this.append = function(element) {
         //adiciona um elemento no final da list
+        
     }
 
     this.insert = function(position, element) {
@@ -35,7 +36,20 @@ function ListasLigadas() {
         //retorna o tamanho da instancia
     }
 
+    this.toString = function() {
+        var current = head,
+        string = ''
+
+        while(current) {
+            string += current.element + ' '
+            current == current.next
+        }
+
+        return string
+    }
+
     this.print = function() {
         //imprime no console
+        console.log(this.toString())
     }
 }
