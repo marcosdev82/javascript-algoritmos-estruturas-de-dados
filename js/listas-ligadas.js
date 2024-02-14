@@ -12,6 +12,8 @@ function ListasLigadas() {
         //adiciona um elemento no final da list
         var node = new Node(element), 
         current
+
+        // debugger
        
         if (head === null) {
             head = node
@@ -32,24 +34,32 @@ function ListasLigadas() {
         //adiciona um elemento em uma posição especfica
     }
 
+    // node1 = João  
+    // node2 = José
+    // node3 = Maria
+
     this.removeAt = function(position) {
         //remove elemento de uma posição especifica
-        if(position > -1 && position < length) {
-            var current = head,
-            previous,
-            index = 0
+        if(position > -1 && position < length) {  //true
+            debugger
+            var current = head, // node1
+            previous, // undefined
+            index = 0 
 
             if (position === 0) {
-                head = current.next
-            } else {    
+                head = current.next 
+            } else { //
                 while(index++ < position) {
-                    previous = current
-                    current = current.next
+                    previous = current  
+                    current = current.next  
                 }
-                previous.next = current.next
+                previous.next = current.next  
+    
             }
-            length--
+            console.log(current.element)
+            length-- //2
             return current.element
+
         } else {
             return null
         }
