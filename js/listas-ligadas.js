@@ -32,6 +32,28 @@ function ListasLigadas() {
 
     this.insert = function(position, element) {
         //adiciona um elemento em uma posição especfica
+        if (position >= 0 && position <= length) {
+            var node = new Node(element),
+            current = head,
+            previous,
+            index = 0
+
+            if (position === 0) {
+                node.next = current
+                head = node
+            } else {
+                while(index++ < position){
+                    previeus = current
+                    current = current.next
+                }
+                node.next = current
+                previous.next = node
+            }
+            length++
+            return true
+        } else {
+            return false
+        }
     }
 
     // node1 = João  
@@ -104,5 +126,5 @@ ll.append('João')
 ll.append('José')
 ll.append('Maria')
 ll.print()
-ll.removeAt(1)
-ll.print()
+// ll.removeAt(1)
+// ll.print()
