@@ -9,7 +9,22 @@ function ListasLigadas() {
 
     this.append = function(element) {
         //adiciona um elemento no final da list
-        
+        var node = new Node(element),
+        current
+
+        if (head === null) {
+
+        } else {
+            current = head
+            
+            while(current.next) {
+                current = current.next
+            }
+
+            current.next = node 
+        }
+
+        length++
     }
 
     this.insert = function(position, element) {
