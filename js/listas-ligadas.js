@@ -1,4 +1,5 @@
 function ListasLigadas() {
+
     var Node = function(element) {
         this.element = element
         this.next = null
@@ -13,7 +14,7 @@ function ListasLigadas() {
         current
        
         if (head === null) {
-            current = node
+            head = node
         } else {
             current = head
             
@@ -52,12 +53,12 @@ function ListasLigadas() {
     }
 
     this.toString = function() {
-        var current = head,
-        string = ''
+        var current = head
+        var string = ''
 
         while(current) {
             string += current.element + ' '
-            current == current.next
+            current = current.next
         }
 
         return string
