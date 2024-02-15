@@ -43,7 +43,7 @@ function ListasLigadas() {
                 head = node
             } else {
                 while(index++ < position){
-                    previeus = current
+                    previous = current
                     current = current.next
                 }
                 node.next = current
@@ -128,3 +128,7 @@ ll.append('Maria')
 ll.print()
 // ll.removeAt(1)
 // ll.print()
+ll.insert(0, 'Carlos')
+ll.print()
+ll.insert(2, 'Ana') 
+ll.print() 
