@@ -78,7 +78,7 @@ function ListasLigadas() {
                 previous.next = current.next  
     
             }
-            console.log(current.element)
+           
             length-- //2
             return current.element
 
@@ -91,17 +91,17 @@ function ListasLigadas() {
         //remove o elemento element
     }
 
-    this.indexOf = function(element) {
+    this.indexOf = function(element) { // José
         //retorna a posição do elemento
-        var current = head,
-        index = 0
+        var current = head, // node (José)
+        index = 0 // 3
         
-        while(current) {
+        while(current) { // true 
             if (element === current.element){
-                return index
+                return  index// 3
             } 
             index++
-            current = current.next
+            current = current.next // José
         }
         return -1
 
@@ -143,5 +143,8 @@ ll.print()
 ll.insert(0, 'Carlos')
 ll.print()
 ll.insert(2, 'Ana') 
-ll.print() 
-ll.indexOf('João')
+ll.print()
+
+console.log(ll.indexOf('José'))
+// console.log(ll.indexOf('Carlos'))
+// console.log(ll.indexOf('Lucas'))
