@@ -63,7 +63,7 @@ function ListasLigadas() {
     this.removeAt = function(position) {
         //remove elemento de uma posição especifica
         if(position > -1 && position < length) {  //true
-            debugger
+            // debugger
             var current = head, // node1
             previous, // undefined
             index = 0 
@@ -89,6 +89,8 @@ function ListasLigadas() {
 
     this.remove = function(element) {
         //remove o elemento element
+        var index = this.indexOf(element)
+        return this.removeAt(index)
     }
 
     this.indexOf = function(element) { // José
@@ -145,6 +147,8 @@ ll.print()
 ll.insert(2, 'Ana') 
 ll.print()
 
-console.log(ll.indexOf('José'))
+// console.log(ll.indexOf('José'))
 // console.log(ll.indexOf('Carlos'))
 // console.log(ll.indexOf('Lucas'))
+console.log(ll.remove('José'))
+ll.print()
