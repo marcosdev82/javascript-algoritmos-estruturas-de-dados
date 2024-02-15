@@ -93,6 +93,18 @@ function ListasLigadas() {
 
     this.indexOf = function(element) {
         //retorna a posição do elemento
+        var current = head,
+        index = 0
+        
+        while(current) {
+            if (element === current.element){
+                return index
+            } 
+            index++
+            current = current.next
+        }
+        return -1
+
     }
 
     this.isEmpty = function() {
@@ -132,3 +144,4 @@ ll.insert(0, 'Carlos')
 ll.print()
 ll.insert(2, 'Ana') 
 ll.print() 
+ll.indexOf('João')
