@@ -111,10 +111,17 @@ function ListasLigadas() {
 
     this.isEmpty = function() {
         //retorna se está vazia ou não
+        return length === 0 
     }
 
     this.size = function() {
         //retorna o tamanho da instancia
+        return length
+    }
+
+    this.getHead = function() {
+        // retorna node
+        return head
     }
 
     this.toString = function() {
@@ -150,5 +157,5 @@ ll.print()
 // console.log(ll.indexOf('José'))
 // console.log(ll.indexOf('Carlos'))
 // console.log(ll.indexOf('Lucas'))
-console.log(ll.remove('Carlos'))
+// console.log(ll.remove('Lucas'))
 ll.print()
