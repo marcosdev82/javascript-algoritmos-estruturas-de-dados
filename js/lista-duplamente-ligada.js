@@ -31,60 +31,11 @@ function ListaDuplamenteLigada() {
     }
 
     this.insert = function(position, element) {
-        //adiciona um elemento em uma posição especfica
-        if (position >= 0 && position <= length) {
-            var node = new Node(element),
-            current = head,
-            previous,
-            index = 0
-
-            if (position === 0) {
-                node.next = current
-                head = node
-            } else {
-                while(index++ < position){
-                    previous = current
-                    current = current.next
-                }
-                node.next = current
-                previous.next = node
-            }
-            length++
-            return true
-        } else {
-            return false
-        }
+       
     }
 
-    // node1 = João  
-    // node2 = José
-    // node3 = Maria
-
     this.removeAt = function(position) {
-        //remove elemento de uma posição especifica
-        if(position > -1 && position < length) {  //true
-            // debugger
-            var current = head, // node1
-            previous, // undefined
-            index = 0 
-
-            if (position === 0) {
-                head = current.next 
-            } else { //
-                while(index++ < position) {
-                    previous = current  
-                    current = current.next  
-                }
-                previous.next = current.next  
-    
-            }
-           
-            length-- //2
-            return current.element
-
-        } else {
-            return null
-        }
+      
     }
 
     this.remove = function(element) {
