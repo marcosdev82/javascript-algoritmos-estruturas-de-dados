@@ -130,3 +130,10 @@ function ListaDuplamenteLigada() {
 }
 
 var ll = new ListaDuplamenteLigada()
+ll.append('João')
+ll.append('José')
+ll.append('Maria')
+ll.insert(0, 'Carlos')
+ll.insert(4, 'lucas')
+ll.insert(2, 'Ana') 
+ll.print()
