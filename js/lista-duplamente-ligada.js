@@ -1,4 +1,4 @@
-function ListasLigadas() {
+function ListaDuplamenteLigada() {
 
     var Node = function(element) {
         this.element = element
@@ -12,8 +12,6 @@ function ListasLigadas() {
         //adiciona um elemento no final da list
         var node = new Node(element), 
         current
-
-        // debugger
        
         if (head === null) {
             head = node
@@ -142,7 +140,7 @@ function ListasLigadas() {
     }
 }
 
-var ll = new ListasLigadas()
+var ll = new ListaDuplamenteLigada()
 ll.append('João')
 ll.append('José')
 ll.append('Maria')
