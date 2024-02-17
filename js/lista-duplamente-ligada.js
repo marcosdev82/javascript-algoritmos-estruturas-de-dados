@@ -17,11 +17,13 @@ function ListaDuplamenteLigada() {
        
         if (head === null) {
             head = node
+            tail = node
         } else {
             current = head
             
             while(current.next) {
                 current = current.next
+                tail = node
             }
 
             current.next = node 
