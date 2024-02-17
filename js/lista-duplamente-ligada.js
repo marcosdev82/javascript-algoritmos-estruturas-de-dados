@@ -3,10 +3,12 @@ function ListaDuplamenteLigada() {
     var Node = function(element) {
         this.element = element
         this.next = null
+        this.prev = null
     }
 
     var length = 0
     var head = null
+    var tail = null
 
     this.append = function(element) {
         //adiciona um elemento no final da list
@@ -141,22 +143,3 @@ function ListaDuplamenteLigada() {
 }
 
 var ll = new ListaDuplamenteLigada()
-ll.append('João')
-ll.append('José')
-ll.append('Maria')
-ll.print()
-// ll.removeAt(1)
-// ll.print()
-ll.insert(0, 'Carlos')
-ll.print()
-ll.insert(2, 'Ana') 
-ll.print()
-
-// console.log(ll.indexOf('José'))
-// console.log(ll.indexOf('Carlos'))
-// console.log(ll.indexOf('Lucas'))
-// console.log(ll.remove('Lucas'))
-ll.print()
-console.log(ll.isEmpty())
-console.log(ll.size())
-console.log(ll.getHead())
