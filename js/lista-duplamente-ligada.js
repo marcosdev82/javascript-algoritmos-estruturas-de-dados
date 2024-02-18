@@ -32,38 +32,38 @@ function ListaDuplamenteLigada() {
         length++
     }
 
-    this.insert = function(position, element) {
-       if (position > 0 && position <= length) {
-            var node = new Node(element),
-            current = head,
-            previous,
-            index = 0
+    this.insert = function(position, element) {//2, Ana
+       if (position > 0 && position <= length) { // 0 - 5
+            var node = new Node(element), // node = Ana
+            current = head, // Carlos
+            previous, // undefined
+            index = 0 // 0
 
-            if (position === 0) {
-                if (!head) {
+            if (position === 0) { // false
+                if (!head) { // null
                     head = node
                     tail = node
                 } else {
-                    node.next = current
-                    current.prev = node
-                    head = node
+                    node.next = current // joão
+                    current.prev = node // Carlos
+                    head = node // carlos
                 }
-            } else if (position === length) {
-                current = tail
-                current.next = node
-                node.prev = current
-                tail = node
-            } else {
-                while(index++ < position) {
-                    previous = current
-                    current.current.next
+            } else if (position === length) { // true
+                current = tail // Maria
+                current.next = node // Lucas
+                node.prev = current // Maria
+                tail = node // Lucas
+            } else { // false
+                while(index++ < position) { // 2 < 2
+                    previous = current // João
+                    current.current.next // José
                 }
-                node.next = current
-                previous.next = node
-                current.prev = node
-                node.prev = previous
+                node.next = current // José
+                previous.next = node // ana
+                current.prev = node // Ana
+                node.prev = previous // João
             }
-            length++
+            length++ // 6
             return true
        } else {
             return false
@@ -71,26 +71,53 @@ function ListaDuplamenteLigada() {
     }
 
     this.removeAt = function(position) {
-      
+        if (position > -1 && position < length) {
+            var current = head,
+            previous,
+            index = 0
+
+            if (position == 0) {
+                head = current.next
+
+                if (length === 1) {
+                    tail = null
+                } else {
+                    head.prev = null
+                }
+            } else if (position === length - 1) {
+                current = tail
+                tail = current.prev
+                tail.next = null
+            } else {
+                while (index++ < position) {
+                    previous = current
+                    current = current.next
+                }
+                previous.next = current.next
+                current.next.prev = previous
+            }
+            length--
+            return current.element
+        } else {
+            return null
+        }
     }
 
     this.remove = function(element) {
-        //remove o elemento element
         var index = this.indexOf(element)
         return this.removeAt(index)
     }
 
-    this.indexOf = function(element) { // José
-        //retorna a posição do elemento
-        var current = head, // node (José)
-        index = 0 // 3
+    this.indexOf = function(element) { 
+        var current = head, 
+        index = 0
         
-        while(current) { // true 
+        while(current) {
             if (element === current.element){
-                return  index// 3
+                return  index
             } 
             index++
-            current = current.next // José
+            current = current.next 
         }
         return -1
 
