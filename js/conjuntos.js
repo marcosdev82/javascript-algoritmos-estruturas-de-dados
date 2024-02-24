@@ -32,6 +32,7 @@ function set() {
 
     this.size = function() {
         // retorna o tamanho do conjunto
+        return Object.keys(items).length
     }
 
     this.values = function() {
