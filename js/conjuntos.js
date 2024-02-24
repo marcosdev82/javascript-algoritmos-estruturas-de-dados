@@ -1,4 +1,4 @@
-function set() {
+function Set() {
 
     var items = {}
 
@@ -13,7 +13,7 @@ function set() {
 
     this.delete = function(value) {
         // remove um valor do conjunto
-        if (!this.has(value)) {
+        if (this.has(value)) {
             delete items[value]
             return true
         }
@@ -46,3 +46,17 @@ function set() {
     }
 
 }
+
+var set = new Set()
+
+set.add(1)
+set.add(2)
+set.add(3)
+set.add(4)
+set.add(4)
+set.add(4)
+set.delete(4)
+
+console.log(set.values())
+
+console.log(set.size())
