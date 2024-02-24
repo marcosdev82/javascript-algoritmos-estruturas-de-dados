@@ -4,6 +4,7 @@ function set() {
 
     this.add = function(value) {
         // adiciona um novo item no conjunto
+      
     }
 
     this.delete = function(value) {
@@ -12,6 +13,7 @@ function set() {
 
     this.has = function(value) {
         // devolve se um valor existe ou não
+        return items.hasOwnProperty(value);
     }
 
     this.clear = function() {
