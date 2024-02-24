@@ -58,5 +58,8 @@ set.add(4)
 set.delete(4)
 
 console.log(set.values())
-
+set.clear()
+console.log(set.values())
 console.log(set.size())
+console.log(set.has(1))
+console.log(set.has(10))
