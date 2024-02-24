@@ -13,6 +13,11 @@ function set() {
 
     this.delete = function(value) {
         // remove um valor do conjunto
+        if (!this.has(value)) {
+            delete items[value]
+            return true
+        }
+        return false
     }
 
     this.has = function(value) {
