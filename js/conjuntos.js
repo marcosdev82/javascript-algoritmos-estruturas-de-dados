@@ -27,6 +27,7 @@ function set() {
 
     this.clear = function() {
         // remove todos os itens do conjunto
+        items = {}
     }
 
     this.size = function() {
