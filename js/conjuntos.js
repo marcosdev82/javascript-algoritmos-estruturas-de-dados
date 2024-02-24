@@ -4,7 +4,9 @@ function set() {
 
     this.add = function(value) {
         // adiciona um novo item no conjunto
-      
+        if (!this.has(value)) {
+            items[value] = value 
+        }
     }
 
     this.delete = function(value) {
