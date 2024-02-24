@@ -6,7 +6,9 @@ function set() {
         // adiciona um novo item no conjunto
         if (!this.has(value)) {
             items[value] = value 
+            return true
         }
+        return false
     }
 
     this.delete = function(value) {
