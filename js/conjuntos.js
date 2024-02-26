@@ -71,6 +71,7 @@ function Set() {
                 intersectionSet.add(values[i])
             }
         }
+        
     }
 
 }
@@ -92,16 +93,30 @@ function Set() {
 // console.log(set.has(1))
 // console.log(set.has(10))
 
+// var setA = new Set()
+// setA.add(1)
+// setA.add(2)
+// setA.add(3)
+
+// var setB = new Set()
+// setB.add(3)
+// setB.add(4)
+// setB.add(5)
+// setB.add(6)
+
+// var unionAB = setA.union(setB)
+// console.log(unionAB.values())
+
 var setA = new Set()
 setA.add(1)
 setA.add(2)
 setA.add(3)
 
 var setB = new Set()
+setB.add(2)
 setB.add(3)
 setB.add(4)
-setB.add(5)
-setB.add(6)
 
-var unionAB = setA.union(setB)
-console.log(unionAB.values())
+
+var intersectionAB = setA.intersection(setB)
+console.log(intersectionAB.values())
