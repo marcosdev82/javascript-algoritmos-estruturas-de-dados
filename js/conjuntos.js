@@ -63,12 +63,12 @@ function Set() {
     }
 
     this.intersection = function(otherSet) {
-        var intersectionSet = new Set(),
-        values = this.values()
+        var intersectionSet = new Set(), // [2,3]
+        values = this.values() //[1,2,3]
 
-        for (var i = 0; i < values.length; i++) {
-            if (otherSet.has(values[i])) {
-                intersectionSet.add(values[i])
+        for (var i = 0; i < values.length; i++) { // 0 , 1, 2
+            if (otherSet.has(values[i])) { // true
+                intersectionSet.add(values[i]) 
             }
         }
         return intersectionSet
