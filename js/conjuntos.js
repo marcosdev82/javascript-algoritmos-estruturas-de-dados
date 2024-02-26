@@ -66,7 +66,7 @@ function Set() {
         var intersectionSet = new Set(),
         values = this.values()
 
-        for (var i; i < values.length; i++) {
+        for (var i = 0; i < values.length; i++) {
             if (otherSet.has(values[i])) {
                 intersectionSet.add(values[i])
             }
