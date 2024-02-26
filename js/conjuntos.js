@@ -71,7 +71,7 @@ function Set() {
                 intersectionSet.add(values[i])
             }
         }
-        
+        return intersectionSet
     }
 
 }
