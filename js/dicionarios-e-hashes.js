@@ -81,6 +81,10 @@ function hasTable() {
     }
 
     var losoLoseHasCode = function(key) {
-        // retorna hash valor numérico
+        var hash = 0
+        for(var i = 0; i < key.length; i++) {
+            hash += key.charCodeAt(i)
+        }
+        return hasg % 37
     }
 }
