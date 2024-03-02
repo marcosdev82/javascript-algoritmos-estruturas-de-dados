@@ -13,7 +13,7 @@ function Dictionary(){
     }
 
     this.has = function(key) {
-        // verifica se a chave existe e retorna um booleano
+        return items.hasOwnProperty(key)
     }
 
     this.get = function(key) {
