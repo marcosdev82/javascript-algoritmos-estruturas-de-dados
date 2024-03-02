@@ -47,19 +47,40 @@ function Dictionary(){
     }
 }
 
-var dic = new Dictionary()
+// var dic = new Dictionary()
 
-dic.set('Chaves', 'chaves@gmail.com')
-dic.set('Kiko', 'kiko@gmail.com')
-dic.set('Senhor Madruga', 'mr.madruga@gmail.com')
+// dic.set('Chaves', 'chaves@gmail.com')
+// dic.set('Kiko', 'kiko@gmail.com')
+// dic.set('Senhor Madruga', 'mr.madruga@gmail.com')
 
-console.log(dic.has('Chaves'))
-console.log(dic.size())
-console.log(dic.get('Kiko'))
-console.log(dic.keys())
-console.log(dic.values())
-console.log(dic.getItems())
-console.log(dic.delete('Chaves'))
-console.log(dic.getItems())
-console.log(dic.clear())
-console.log(dic.getItems())
+// console.log(dic.has('Chaves'))
+// console.log(dic.size())
+// console.log(dic.get('Kiko'))
+// console.log(dic.keys())
+// console.log(dic.values())
+// console.log(dic.getItems())
+// console.log(dic.delete('Chaves'))
+// console.log(dic.getItems())
+// console.log(dic.clear())
+// console.log(dic.getItems())
+
+
+function hasTable() {
+    var table = []
+
+    this.put = function(key, value) {
+        // insere elemento
+    }
+
+    this.remove = function(key) {
+        // remove elemento
+    }
+
+    this.get =  function(key) {
+        // retorna valor
+    }
+
+    var losoLoseHasCode = function(key) {
+        // retorna hash valor numérico
+    }
+}
