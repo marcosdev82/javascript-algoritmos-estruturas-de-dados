@@ -69,25 +69,25 @@ function hashTable() {
     var table = []
 
     this.put = function(key, value) {
-        var position = losoLoseHasCode(key)
+        var position = losoLoseHashCode(key)
         console.log(position + ' ' + key)
         table[position] = value
     }
 
     this.remove = function(key) {
-        table[losoLoseHasCode(key)] = undefined
+        table[losoLoseHashCode(key)] = undefined
     }
 
     this.get =  function(key) {
-        return table[losoLoseHasCode(key)]
+        return table[losoLoseHashCode(key)]
     }
 
-    var losoLoseHasCode = function(key) {
+    var losoLoseHashCode = function(key) {
         var hash = 0
         for(var i = 0; i < key.length; i++) {
             hash += key.charCodeAt(i)
         }
-        return hasg % 37
+        return hash % 37
     }
 }
 
@@ -95,4 +95,4 @@ var hash = new hashTable()
 
 hash.put('Chaves', 'chaves@gmail.com')
 hash.put('Kiko', 'kiko@gmail.com')
-hash.put('Senhor Madruga', 'mr.madruga@gmail.com')
+hash.put('Florinda', 'mr.madruga@gmail.com')
