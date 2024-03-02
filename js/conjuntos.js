@@ -74,6 +74,19 @@ function Set() {
         return intersectionSet
     }
 
+    this.difference = function(otherSet) { // [2,3,4]
+        var differenceSet = new Set(), // [1]
+        values = this.values() // [1,2,3]
+
+        for (var i = 0; i < values.length; i++) { // 0,1,2
+            if (!otherSet.has(values[i])) { // false
+                differenceSet.add(values[i])
+            }
+        }
+
+        return differenceSet // [1]
+    }
+
 }
 
 // var set = new Set()
@@ -120,3 +133,17 @@ function Set() {
 
 // var intersectionAB = setA.intersection(setB)
 // console.log(intersectionAB.values())
+
+// var setA = new Set()
+// setA.add(1)
+// setA.add(2)
+// setA.add(3)
+
+// var setB = new Set()
+// setB.add(2)
+// setB.add(3)
+// setB.add(4)
+
+
+var intersectionAB = setA.intersection(setB)
+console.log(intersectionAB.values())
