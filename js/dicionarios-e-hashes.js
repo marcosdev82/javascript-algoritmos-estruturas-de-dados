@@ -21,11 +21,11 @@ function Dictionary(){
     }
 
     this.clear = function() {
-        // remove todos os itens do dicionário
+        items = {}
     }
 
     this.size = function() {
-        // retorna a quantidade de elementos contidos no dicionário
+        return Object.keys(items).length
     }
 
     this.keys = function() {
