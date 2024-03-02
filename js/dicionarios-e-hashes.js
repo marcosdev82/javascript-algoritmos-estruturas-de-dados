@@ -17,7 +17,7 @@ function Dictionary(){
     }
 
     this.get = function(key) {
-        // devolve um valor específico a partir de um chave
+         return this.has(key) ? items[key] : undefined
     }
 
     this.clear = function() {
