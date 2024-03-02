@@ -79,7 +79,7 @@ function hasTable() {
     }
 
     this.get =  function(key) {
-        // retorna valor
+        return table[losoLoseHasCode(key)]
     }
 
     var losoLoseHasCode = function(key) {
