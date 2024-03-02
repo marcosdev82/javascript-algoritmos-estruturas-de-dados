@@ -87,6 +87,21 @@ function Set() {
         return differenceSet // [1]
     }
 
+    this.subset = function(otherSet) {
+        if (this.size() > otherSet.size()) {
+            return false
+        } else {
+            var values = this.values()
+
+            for (var i = 0; i < values.length; i++) {
+                if (!otherSet.has(values[i])) {
+                    return false
+                }
+            }
+            return true
+        }
+    }
+
 }
 
 // var set = new Set()
