@@ -65,7 +65,7 @@ function Dictionary(){
 // console.log(dic.getItems())
 
 
-function hasTable() {
+function hashTable() {
     var table = []
 
     this.put = function(key, value) {
@@ -90,3 +90,9 @@ function hasTable() {
         return hasg % 37
     }
 }
+
+var hash = new hashTable()
+
+hash.put('Chaves', 'chaves@gmail.com')
+hash.put('Kiko', 'kiko@gmail.com')
+hash.put('Senhor Madruga', 'mr.madruga@gmail.com')
