@@ -29,7 +29,7 @@ function Dictionary(){
     }
 
     this.keys = function() {
-        // devolve um array com todas as chaves do dicionário 
+        return Object.keys(items)
     }
 
     this.values = function() {
