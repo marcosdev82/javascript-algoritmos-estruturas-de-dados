@@ -89,6 +89,10 @@ function hashTable() {
         }
         return hash % 37
     }
+
+    this.size = function() {
+        return table.length
+    }
 }
 
 var hash = new hashTable()
@@ -97,4 +101,7 @@ hash.put('Chaves', 'chaves@gmail.com')
 hash.put('Kiko', 'kiko@gmail.com')
 hash.put('Florinda', 'mr.madruga@gmail.com')
 hash.remove('Kiko')
+
 console.log(hash.get('Kiko'))
+
+console.log(hash.size())
