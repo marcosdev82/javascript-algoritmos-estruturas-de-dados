@@ -75,7 +75,7 @@ function hasTable() {
     }
 
     this.remove = function(key) {
-        // remove elemento
+        table[losoLoseHasCode(key)] = undefined
     }
 
     this.get =  function(key) {
