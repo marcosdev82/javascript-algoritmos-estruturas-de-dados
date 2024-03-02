@@ -2,12 +2,14 @@ function Dictionary(){
     var items = {}
 
     this.set = function(key, value) {
-        // adiciona um novao item ao dicionário
         items[key] = value
     }
 
     this.delete = function(key) {
-        // remove o valor do dicionário usando a chave
+         if (this.has(key)) {
+            delete items[key]
+            return true
+        }
     }
 
     this.has = function(key) {
