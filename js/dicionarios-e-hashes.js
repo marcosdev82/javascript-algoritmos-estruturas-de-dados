@@ -69,7 +69,9 @@ function hasTable() {
     var table = []
 
     this.put = function(key, value) {
-        // insere elemento
+        var position = losoLoseHasCode(key)
+        console.log(position + ' ' + key)
+        table[position] = value
     }
 
     this.remove = function(key) {
