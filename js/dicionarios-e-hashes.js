@@ -17,7 +17,7 @@ function Dictionary(){
     }
 
     this.get = function(key) {
-         return this.has(key) ? items[key] : undefined
+        return this.has(key) ? items[key] : undefined
     }
 
     this.clear = function() {
