@@ -41,4 +41,8 @@ function Dictionary(){
         }
         return values  
     }
+
+    this.getItems = function() {
+        return items
+    }
 }
