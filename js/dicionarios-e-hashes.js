@@ -267,8 +267,27 @@ function hashTable() {
         return false
     }
 
-    this.get =  function(key) {
-        return table[losoLoseHashCode(key)]
+    // this.get =  function(key) {
+    //     return table[losoLoseHashCode(key)]
+    // }
+
+    this.get = function(key) {
+        var position = losoLoseHashCode(key)
+
+        if (table[position] != undefined) {
+            var current = table[position].getHead()
+
+            while(current.next) {
+                if (current.element.key === key) {
+                    return current.element.vallue
+                }
+                current = current.next
+            }
+            if (current.element.key === key) {
+                return current.element.vallue
+            }
+        }
+        return undefined
     }
 
     var losoLoseHashCode = function(key) {
