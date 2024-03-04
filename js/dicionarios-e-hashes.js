@@ -235,8 +235,36 @@ function hashTable() {
         table[position].append(new ValuePair(key, value))
     }
 
+    // this.remove = function(key) {
+    //     table[losoLoseHashCode(key)] = undefined
+    // }
+
     this.remove = function(key) {
-        table[losoLoseHashCode(key)] = undefined
+        var position = losoLoseHashCode(key)
+
+        if (table[position] !== undefined) {
+            var current = table[position].getHead()
+
+            while(current.next) {
+                if (current.element.key === key) {
+                    table[position].remove(current.element)
+                    if (table[position].isEmpty()) {
+                        table[position] = undefined
+                    }
+                    return true
+                }
+                current = current.next
+            }
+
+            if (current.element.key === key) {
+                table[position].remove(current.element)
+                if (table[position].isEmpty()) {
+                    table[position] = undefined
+                }
+                return true
+            }
+        }
+        return false
     }
 
     this.get =  function(key) {
