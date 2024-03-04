@@ -212,6 +212,14 @@ function Dictionary(){
 function hashTable() {
     var table = []
 
+    var ValuePair = function(key, value) {
+        this.key = key
+        this.value = value
+        this.toString = function() {
+            return '[' + this.key + ' - ' + this.vallue + ']'
+        }
+    }
+
     this.put = function(key, value) {
         var position = losoLoseHashCode(key)
         // console.log(position + ' ' + key)
