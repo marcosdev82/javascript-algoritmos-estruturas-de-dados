@@ -271,20 +271,22 @@ function hashTable() {
     //     return table[losoLoseHashCode(key)]
     // }
 
-    this.get = function(key) {
+    this.get = function(key) { // Pati
         var position = losoLoseHashCode(key)
 
-        if (table[position] != undefined) {
-            var current = table[position].getHead()
-
-            while(current.next) {
-                if (current.element.key === key) {
-                    return current.element.vallue
+        if (table[position] !== undefined) { // true
+            var current = table[position].getHead() // kiko
+        
+            while(current.next) { // pati
+             
+                if (current.element.key === key) { // false
+                    return current.element.value
                 }
-                current = current.next
+                current = current.next // Pati
             }
-            if (current.element.key === key) {
-                return current.element.vallue
+            
+            if (current.element.key === key) { // true
+                return current.element.value // pati@gmail.com
             }
         }
         return undefined
@@ -335,5 +337,9 @@ hash.put('Clotilde', 'clotilde@gmail.com')
 hash.put('Girafales', 'girafales@gmail.com')
 hash.put('Nhonho', 'nhonho@gmail.com')
 hash.put('Jaiminho', 'jaiminho@gmail.com')
+// hash.put('Marcos', '...')
 
 hash.print()
+
+
+console.log(hash.get('Pati'))
