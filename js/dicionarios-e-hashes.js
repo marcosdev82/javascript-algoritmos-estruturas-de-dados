@@ -70,7 +70,7 @@ function hashTable() {
 
     this.put = function(key, value) {
         var position = losoLoseHashCode(key)
-        console.log(position + ' ' + key)
+        // console.log(position + ' ' + key)
         table[position] = value
     }
 
@@ -93,15 +93,39 @@ function hashTable() {
     this.size = function() {
         return table.length
     }
+
+    this.print = function() {
+        for(var i = 0; i < table.length; i++) {
+            if (table[i] !== undefined) {
+                console.log(i + " : " + table[i])
+            }
+        }
+    }
 }
 
 var hash = new hashTable()
 
+// hash.put('Chaves', 'chaves@gmail.com')
+// hash.put('Kiko', 'kiko@gmail.com')
+// hash.put('Florinda', 'mr.madruga@gmail.com')
+
+// hash.remove('Kiko')
+
+// console.log(hash.get('Kiko'))
+
+// console.log(hash.size())
+
 hash.put('Chaves', 'chaves@gmail.com')
 hash.put('Kiko', 'kiko@gmail.com')
-hash.put('Florinda', 'mr.madruga@gmail.com')
-hash.remove('Kiko')
+hash.put('Florinda', 'florinda@gmail.com')
+hash.put('Madruga', 'madruga@gmail.com')
+hash.put('Barriga', 'barriga@gmail.com')
+hash.put('Chiquinha', 'chiquinha@gmail.com')
+hash.put('Popis', 'popis@gmail.com')
+hash.put('Pati', 'pati@gmail.com')
+hash.put('Clotilde', 'clotilde@gmail.com')
+hash.put('Girafales', 'girafales@gmail.com')
+hash.put('Nhonho', 'nhonho@gmail.com')
+hash.put('Jaiminho', 'jaiminho@gmail.com')
 
-console.log(hash.get('Kiko'))
-
-console.log(hash.size())
+hash.print()
