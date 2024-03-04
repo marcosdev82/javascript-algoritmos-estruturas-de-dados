@@ -216,7 +216,7 @@ function hashTable() {
         this.key = key
         this.value = value
         this.toString = function() {
-            return '[' + this.key + ' - ' + this.vallue + ']'
+            return '[' + this.key + ' - ' + this.value + ']'
         }
     }
 
@@ -229,8 +229,8 @@ function hashTable() {
     this.put = function(key, value) {
         var position = losoLoseHashCode(key)
 
-        if (table[position] === 'undefined') {
-            table[position] = new LinkedList()
+        if (table[position] === undefined) {
+            table[position] = new ListasLigadas()
         }
         table[position].append(new ValuePair(key, value))
     }
