@@ -9,8 +9,16 @@ function BinarySeachTree(){
     var root = null
 
     this.insert = function() {
-        // insere um chave
+        var newNode = new Node(key)
+
+        if (root === null) {
+            root = newNode
+        } else {
+            insertNode(root, newNode)
+        }
     }
+
+ 
 
     this.search = function(key) {
         // busca chave
