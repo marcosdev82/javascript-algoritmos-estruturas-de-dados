@@ -35,8 +35,22 @@ function BinarySeachTree(){
     }
 
     this.search = function(key) {
-        // busca chave
+        return searchNode(root, key)
     }
+
+    var searchNode = function(node, key){
+        if (node === null) {
+            return false
+        }
+
+        if (key < node.key) {
+            return searchNode(node.left, key)
+        } else if (key < node.key) {
+            return searchNode(node.right, key)
+        } else {
+            return true
+        }
+    }  
 
     this.remove = function(key) {
         // remove chave
