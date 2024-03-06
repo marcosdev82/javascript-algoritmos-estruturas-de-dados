@@ -71,7 +71,6 @@ function BinarySeachTree(){
                 node = null
                 return node
             }
-
             if (node.left === null) {
                 node = node.right 
                 return node
