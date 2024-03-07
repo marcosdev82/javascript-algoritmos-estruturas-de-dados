@@ -99,6 +99,13 @@ function BinarySeachTree(){
         return null
     }
 
+    var findMinNode = function(node) {
+        while(node && node.left !== null) {
+            node = node.left
+        }
+        return node
+    }
+
     this.max = function() {
         // retorna a maior chave
     }
