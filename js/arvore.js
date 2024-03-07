@@ -86,7 +86,17 @@ function BinarySeachTree(){
     }
 
     this.min = function() {
-        // retorna a menor chave
+        return minNode(root)
+    }
+
+    var minNode = function(node) {
+        if (node) {
+            while(node && node.left !== null) {
+                node = node.left
+            }
+            return node.key
+        }
+        return null
     }
 
     this.max = function() {
