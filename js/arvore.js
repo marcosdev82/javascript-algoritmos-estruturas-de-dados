@@ -107,18 +107,36 @@ function BinarySeachTree(){
     }
 
     this.max = function() {
-        // retorna a maior chave
+        return maxNode(root);
+    }
+
+    var maxNode = function(node) {
+        if (node) {
+            while(node && node.right !== null) {
+                node = node.right
+            }
+            return node.key
+        }
+        return null
     }
 
     this.inOrderTraverse = function() {
-        // visita todos os nós da árvore usando um percurso em ordem
+        inOrderTraverseNode(root, callback)
     }
+
+    var inOrderTraverseNode = function(node, callback) {
+            if (node != null) {
+                inOrderTraverseNode(node.left, callback)
+                callback(node.key)
+                inOrderTraverseNode(node.right, callback)
+            }
+    } 
+
+
 
     this.preOrderTraverse = function() {
         // visita todos os nós da árevore usando um percurso pré ordem
     }
-
-    
 
 
 }
