@@ -132,11 +132,28 @@ function BinarySeachTree(){
             }
     } 
 
-
-
     this.preOrderTraverse = function() {
-        // visita todos os nós da árevore usando um percurso pré ordem
+        preOrderTraverseNode(root, callback)
     }
 
+    var preOrderTraverseNode = function(node, callback) {
+            if (node != null) {
+                callback(node.key)
+                preOrderTraverseNode(node.left, callback)
+                preOrderTraverseNode(node.right, callback)
+            }
+    } 
+
+    this.postOrderTraverse = function() {
+        postOrderTraverseNode(root, callback)
+    }
+
+    var postOrderTraverseNode = function(node, callback) {
+            if (node != null) {
+                postOrderTraverseNode(node.left, callback)
+                postOrderTraverseNode(node.right, callback)
+                callback(node.key)
+            }
+    } 
 
 }
